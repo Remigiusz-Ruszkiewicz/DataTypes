@@ -6,13 +6,27 @@ using System.Threading.Tasks;
 
 namespace Objects
 {
-    public class Horse : IAnimal
+    public class Horse : Animal
     {
-        public string Name { get; set; } = "Horse";
+        public Horse() {
+            Name = "xd";
+        }
 
-        public int GetLegs()
+        public override string Name { get ; set ; }
+
+        public override int GetLegs()
         {
             return 4;
+        }
+        public override string AnimalType()
+        {
+            string rezult = "XYZ";
+            rezult = rezult + " " + base.AnimalType();
+            return rezult;
+        }
+        public override void Sound()
+        {
+            Console.WriteLine("ihaha"); 
         }
     }
 }

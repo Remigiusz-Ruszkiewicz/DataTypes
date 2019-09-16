@@ -11,9 +11,11 @@ namespace Objects
         static void Main(string[] args)
         {
             //IAnimal animal = new IAnimal();
-            IAnimal animal = new Person();
+            Animal animal = new Horse();
             Console.WriteLine(animal.Name);
             Console.WriteLine(animal.GetLegs());
+            animal.Sound();
+            Console.WriteLine(animal.AnimalType());
             Console.ReadLine();
         }
     }
